@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dni Digital</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.header {
+  background-color: #2c7be5;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2c7be5;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  text-align: center;
+}
+
+.close {
+  margin-top: 10px;
+  color: #2c7be5;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Dni Digital</div>
+
+<div class="container">
+
+  <div class="fecha">
+    Última actualización 30/12/2025 14:30 hs
+  </div>
+
+  <div class="card">
+    <h3>Datos personales</h3>
+    <p><strong>Nombre:</strong> JUAN PÉREZ</p>
+    <p><strong>DNI:</strong> 12.345.678</p>
+  </div>
+
+  <div class="card">
+    <h3>Domicilio</h3>
+    <p>Av. Siempre Viva 742</p>
+    <p>Buenos Aires</p>
+  </div>
+
+  <button class="btn btn-primary" onclick="mostrarDNI()">
+    Ver detalle de mi DNI Digital
+  </button>
+
+  <button class="btn btn-secondary" onclick="alert('Mesa de ayuda')">
+    Mesa de ayuda
+  </button>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <p><strong>DNI DIGITAL</strong></p>
+    <p style="color:red;font-weight:bold;">DEMO - NO VÁLIDO</p>
+    <p>(Acá iría la imagen del DNI)</p>
+
+    <div class="close" onclick="cerrar()">Cerrar</div>
+  </div>
+</div>
+
+<script>
+function mostrarDNI() {
+  document.getElementById("modal").style.display = "flex";
+}
+
+function cerrar() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
